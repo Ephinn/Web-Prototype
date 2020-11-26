@@ -1,0 +1,239 @@
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body { 
+	margin: 0;
+	display: grid;
+	grid-template-columns: minmax(min-content, canvas) 1fr;
+	grid-template-areas: 
+  "header header"
+  "main main"
+  "footer footer";
+	font-family: graphie, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+}
+
+header {
+	grid-area: header;
+	color: rgb(0, 0, 0);
+	text-align: center;
+  font-size: 40px;
+  background-color: rgba(255, 0, 200, 0.11);
+  animation: background 15s infinite;
+  font-family: chauncy-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes background {
+  25% {background-color: rgba(0,255,200,0.11);}
+  50% {background-color: rgba(0, 255, 0, 0.11);}
+  75% {background-color: rgba(251, 255, 0, 0.185);}
+}
+
+.grid-container {
+  grid-area: header;
+  display: grid;
+  gap: 0px 0px;
+  grid-template-areas:
+    "About-Us Donate Volunteer Subscribe";
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0); 
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: graphie, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.About-Us:hover {
+  grid-area: About-Us;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.Donate:hover {
+  grid-area: Donate;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.Volunteer:hover {
+  grid-area: Volunteer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.Subscribe:hover {
+  grid-area: Subscribe;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+main {
+  margin-top: 5px;
+  margin-left: 5px;
+	grid-area: main;
+	color: rgb(0, 0, 0);
+	
+}
+
+.overview {
+  border-top: 1px solid black;
+  padding-top: 25px;
+  margin: 30px;
+  text-align: left;
+  font-size: 20px;
+  font-family: graphie, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.Who_We_Help {
+  margin: 30px;
+  font-family: graphie, sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: rgba(228, 228, 228, 0.822);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.Latest_News {
+  background-image: url("Latest News.jpg");
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 100px;
+}
+
+.How_Can_You_Help {
+  margin: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  text-align: center;
+}
+
+
+.button_subscribe {
+  background-color: rgba(255, 255, 255, 0); 
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+  padding: 5px 30px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: graphie, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+}
+
+
+
+.subscribe_css {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+.form {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+}
+.submit {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
+footer {
+	grid-area: footer;
+	color: rgb(0, 0, 0);
+	text-align: center;
+  font-size: 40px;
+  background-color: rgba(255, 0, 200, 0.11);
+  animation: background 15s infinite;
+  font-family: chauncy-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Social:hover {
+  grid-area: Social;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.title {
+	color: rgb(0, 0, 0);
+	text-align: center;
+  font-size: 30px;
+  font-family: graphie, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.about_us {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
+.our_vision{
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+
+.our_values{
+  background-color: rgb(211, 211, 211);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.our_values_paragraph {
+  margin-left: 50px;
+  margin-right: 50px;
+}
